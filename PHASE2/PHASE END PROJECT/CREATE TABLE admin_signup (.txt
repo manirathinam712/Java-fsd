@@ -1,0 +1,26 @@
+CREATE TABLE user_signup (
+      id INT PRIMARY KEY AUTO_INCREMENT,
+      name VARCHAR(255) NOT NULL,
+      email VARCHAR(255) NOT NULL,
+      password VARCHAR(255) NOT NULL
+     );
+
+
+
+CREATE TABLE favorite_crossing (
+       id INT PRIMARY KEY AUTO_INCREMENT,
+       railway_crossing_id INT,
+       FOREIGN KEY (railway_crossing_id) REFERENCES railway_crossing(id)
+     );
+
+
+CREATE TABLE railway_crossing (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(255),
+  address VARCHAR(255),
+  landmark VARCHAR(255),
+  train_schedule VARCHAR(255),
+  person_in_charge VARCHAR(255),
+  status VARCHAR(50)
+);
+-- Create railway_crossings table --
